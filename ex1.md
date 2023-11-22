@@ -1,0 +1,1 @@
+Revolution OS é um documentário lançado em 2001, dirigido por J.T.S. Moore, que explora a ascensão do movimento de software livre e de código aberto. O filme traça a história desde os primórdios do software livre com o Projeto GNU de Richard Stallman até o surgimento do sistema operacional Linux e sua popularidade crescente.

@@ -1,0 +1,30 @@
+/* ----------------------------------------------- */
+/* **NOME DO AQRQUIVO**
+* **RESUMO DO CODIGO**
+* Copyright (C) Jose Gabriel Queiroz De Melo, 2019
+* Licenca GNU/GPL v2.0
+* Este programa nao tem QUALQUER GARANTIA
+* Autor: Jose Gabriel Queiroz de Melo <@EsojMelo>  
+* Data: **2019 -06 -30 **
+*/
+/* ----------------------------------------------- */
+/* includes */
+
+includes
+
+/* ----------------------------------------------- */
+/* defines */
+
+defines
+
+/* ----------------------------------------------- */
+/* Descricao:**
+* Entrada: **
+* Saida: **
+*/
+
+**CODIGO E COMENTARIOS**
+
+/* ----------------------------------------------- */
+75 /* vi:set ai et ts=4 tw=0 sw=4 wm=0 cc=54 fo=croql:*/
+76 /* C config for Vim modeline by Dr. Beco v.190727 */

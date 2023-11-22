@@ -1,0 +1,71 @@
+===== 
+  - pegarMacaco()
+  - abaixar()
+  - colocarMacaco()
+  - macaco()
+  - se macaco() levantou carro 
+=====
+ 
+
+
+====== 
+<code>
+se sim > para()
+se não > LevantarCarro()
+</code> 
+======
+
+     
+=====  
+  - lenvantar()
+  - pegarStep() 
+  - pegarChaveDeRoda()
+  - abaixar()
+  - colocarChaveDeRoda()
+  - girarChaveDeRoda() 
+=====
+
+
+====== 
+<code>
+parafusosNoPneu = 4 
+enquanto parafusosNoPneu > 0 for verdadeiro:
+  se girarChaveDeRoda() não retirar parafuso
+      girarChaveDeRoda()
+  se girarChaveDeRoda() retirar parafuso
+      trocarParafuso() and parafusosNoPneu = parafusosNoPneu - 1
+</code> 
+======
+
+        
+===== 
+  - retirarPneu()
+  - colocarStep()
+=====
+
+======
+<code>
+parafusosNoStep = 0
+enquanto parafusosNoStep < 4 for verdadeiro: 
+  se girarChaveDeRoda() não apertar parafuso
+    girarChaveDeRoda()
+  se girarChaveDeRoda() apertar parafuso
+    trocarParafuso() and parafusosNoStep = parafusosNoStep + 1 
+</code> 
+======
+ 
+=====     
+  - abaixarMacaco()
+=====
+
+======
+<code>
+se abaixarMacaco() > sim
+    retirar macaco
+se abaixarMacaco() > não
+    abaixarMacaco()
+</code>
+
+===
+mgs: TROCA DE PNEU BEM SUCEDIDA!
+===

@@ -1,0 +1,29 @@
+===== 
+Olá! Sou José Gabriel Queiroz de Melo, eu sou aluno da UPE de Engenharia de Controle e Automação. Antes da UPE eu era da UFRPE do Cabo Santo Agostinho e estava no curso de Engenharia Eletrônica. Passei dois anos fazendo Eng. Eletrônica, mas, após muita luta, fiz a transferência externa para UPE, pois é mais próximo de casa.
+Escolhi engenharia porque sempre gostei de tecnologia e sempre via as atividades que meu pai fazia em casa. Gosto muito de entender certas resoluções de exercícios matemáticos, o que me faz sentir um certo entusiasmo. Além disso, comecei na área da programação quando entrei na faculdade, o que abriu minha mente, me dando várias opções de áreas de atuanção que antes eu não imaginava entrar! 
+=====
+
+====== contatos: ======
+  * [[https://www.instagram.com/esojmelo/|Instagram]]
+  * [[https://www.linkedin.com/in/jos%C3%A9-melo-28974a14a/|Linkedin]]
+  * [[gabriel.melo2002.br@gmail.com|Email]]
+
+====== Repositório Git ======
+[[https://github.com/EsojMelo|Meu GitHub]] @EsojMelo
+
+====== Liguagens de programação conhecidas ======
+^Linguagem   ^Curso          ^Nível         ^
+| Python     |Curso em vídeo |Avançado      |
+|Java        |AdaTech        |Iniciante     |
+|JavaScript  |Dio            |Iniciante     |
+|C           |UPE            |Intermediário |
+
+
+====== Linguagem de Marcação de Texto ======
+Linguagem   ^Curso          ^Nível         ^
+|HTML/CSS    |DIO/AdaTech    |Intermediário |
+|Wiki        |UPE            |Iniciante     |
+
+
+Também fiz uma leve introdução a banco de dados:
+{{https://eurotigroup.com.br/blog/wp-content/uploads/2014/11/mysql_hosting.png}}
