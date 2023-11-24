@@ -3,15 +3,15 @@
 
 #### Summary
 
-This example shows how to use markdown to integrate your doxygen __mainpage__ with the github __mainpage__.
+Making codes for the firts 12° __Project Euler__ exercíse.
 
 #### Description
 
-Here a more detailed description of the theme.
+In the codes have some descriptions how a did it.
 
-The markdown bellow are compatible with _doxygen_ and _github_.
+------------------------------------------------------
 
-If you are planning to integrate those two, better not use header level 1, because doxygen already have a big title and they are going to be duplicated.
+## Below here are some tips how to edit markdonw files
 
 ##### Paragraph
 
