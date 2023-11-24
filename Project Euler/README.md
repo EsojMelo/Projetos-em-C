@@ -180,8 +180,6 @@ _________________________________________________________________
 * Version 20231121.154824
 * Date 2023-11-21
 * Author Jose Gabriel Queiroz De Melo <<jgqm@poli.br>> (jgqm)
-* Webpage <[beco.poli.br/jgqmusername](http://beco.poli.br/beco.poli.br/jgqmusernameusername)>
-
 _________________________________________________________________
 
 ####Copyright, License and Warranty
