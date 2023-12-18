@@ -13,28 +13,40 @@ int main(void)
     char celulas[nCells];
     int jogador = 2;
     int count = 0;
+    char exit = 'y';
 
     printf("\nPut a cell number and letter 'O' or 'V', for exemple: 2 O\n"
             "don't forget the space between 2 (space) O\n\n");
 
-    for (int i = 0; i < nCells ; i++)
-    {
-        celulas[i] = ' ';
-    }
-
-    printCell(celulas);
-
     do
-    {   
-        humano(&jogador, celulas);
-        count ++;
-        
-    }while (count < 15 && winnerSearch(celulas, 0) != 1);
+    {
+        for (int i = 0; i < nCells ; i++)
+        {
+            celulas[i] = ' ';
+        }
 
-    if (winnerSearch(celulas, 1) == 1)
-        printf("\nPLAYER %d WIN!", jogador);
-    else
-        printf("\nANYONE WIN!");
+        printCell(celulas);
+
+        do
+        {   
+            humano(&jogador, celulas);
+            count ++;
+            
+        }while (count < 15 && winnerSearch(celulas, 0) != 1);
+
+        if (winnerSearch(celulas, 1) == 1)
+            printf("\nPLAYER %d WIN!\n", jogador);
+        else
+            printf("\nNOBODY WIN!\n");
+
+        do
+        {
+            printf("\nDo you wanna play again? [y - continue | n - exit]: \n");
+            scanf("%c", &exit);
+            exit = tolower(exit);
+        } while (exit != 'y' && exit != 'n');
+        
+    }while(exit != 'n');
 
     return EXIT_SUCCESS;
 }
@@ -95,7 +107,7 @@ void humano(int *jogador, char celulas[nCells])
         scanf("%d %c", &chooseCell, &letra);
         letra = toupper(letra);
         
-    }while ((letra != 'V' && letra != 'O') || (chooseCell < 0 && chooseCell > 14));
+    }while ((letra != 'V' && letra != 'O') || (chooseCell < 0 && chooseCell > 14) || celulas[chooseCell] != ' ');
     celulas[chooseCell] = letra;
     printCell(celulas);
 
