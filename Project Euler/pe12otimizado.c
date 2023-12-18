@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int countDivisors(long long num);
+int countDivisors(long num);
 
 int main(void) 
 {
-    long long i = 1;
-    long long sum = 1;
+    long i = 1;
+    long sum = 1;
 
     while (countDivisors(sum) <= 500) 
     {
@@ -14,15 +14,15 @@ int main(void)
         sum += i;
     }
 
-    printf("\nO numero e: %lld", sum);
+    printf("\nO numero e: %ld", sum);
 
     return 0;
 }
 
-int countDivisors(long long num) 
+int countDivisors(long num) 
 {
     int count = 0;
-    for (long long i = 1; i * i <= num; i++) 
+    for (long i = 1; i * i <= num; i++) 
     {
         if (num % i == 0) 
         {

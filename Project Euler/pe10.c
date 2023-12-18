@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 
 #define n 2000001
@@ -39,5 +40,5 @@ int main(void)
     
     printf("The sum of primes numbers: %lld", sum);
 
-    return 0;
+    return EXIT_SUCCESS;
 }

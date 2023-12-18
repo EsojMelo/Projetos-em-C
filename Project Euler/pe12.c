@@ -9,7 +9,7 @@ int main(void)
     j = 0;
     sum = 0;
 
-    while (count < 400)
+    while (count < 500)
     {
         count = 0;
         i++;
