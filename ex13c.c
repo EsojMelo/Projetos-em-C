@@ -20,7 +20,9 @@ int main(void)
     char exit = 'y';
 
     printf("\nPut a cell number and letter 'O' or 'V', for exemple: 2 O\n"
-            "don't forget the space between 2 (space) O\n\n");
+            "don't forget the space between 2 (space) O\n"
+            "who complete the word OVO first WINS\n"
+            "GOOD LUCK!\n\n");
 
     do
     {
@@ -50,7 +52,7 @@ int main(void)
             printCell(celulas);
             count ++;
             
-        }while (count < 15 && winnerSearch(celulas, 0) != 1);
+        }while ((count < 15) && (winnerSearch(celulas, 0) != 1));
 
         if (winnerSearch(celulas, 1) == 1)
         {
@@ -101,43 +103,19 @@ void printCell(char celulas[nCells])
 
 int winnerSearch(char celulas[nCells], int showCells)
 {
+    int checkNoreturn = 0;
+
     for (int i = 0; i < nCells - 2; i++)
     {
         if (celulas[i] == 'O' && celulas[i + 1] == 'V' && celulas[i + 2] == 'O')
         {
             if (showCells == 1)
                 printf("\nCells sequence: %d  %d  %d", i, i + 1, i + 2 );
-            return 1;
+            checkNoreturn = 1;
             break;
-        }  
-    }
-}
-
-void winnertest(char celulas[nCells])
-{
-    int stop = 0;
-    
-    for (int i = 0; i < nCells - 2; i++)
-    {
-        if (celulas[i] == ' ')
-        {
-            celulas[i] = 'O';
-            if (celulas[i + 1] == 'V')
-            {
-                stop = 1;
-                celulas[i] = 'V';
-                break;
-            } 
-            
-            celulas[i] = 'V';
-            if (celulas[i + 1] == 'O')
-            {
-                stop = 1;
-                celulas[i] = 'O';
-                break;
-            }     
         }
     }
+    return checkNoreturn;
 }
 
 void computador(char celulas[nCells])
@@ -145,7 +123,7 @@ void computador(char celulas[nCells])
     int i = 0, check = 0;
     int i2;
     int i3;
-    int path = rand () % 4;
+    int path = rand () % 3;
     int side = rand () % 2;
 
     for (i = 0; i < nCells - 2; i++)
@@ -194,6 +172,7 @@ void computador(char celulas[nCells])
                        celulas[i3] = 'V';
                        check = 1; 
                     }
+                    break;
                 }
             }
         }
@@ -206,12 +185,12 @@ void computador(char celulas[nCells])
                 i3 = i + 2;
                 if (celulas[i] == ' ' && celulas[i2] == 'O' && celulas[i3] == ' ')
                 {
-                    if (side == 0)
+                    if (side == 0 && celulas[i - 1] != 'V' && celulas[i - 2] != 'O')
                     {
                         celulas[i] = 'O';
                         check = 1;
                     }
-                    else
+                    else if (side == 1 && celulas[i3 + 1] != 'V' && celulas[i3 + 2] != 'O')
                     {
                        celulas[i3] = 'O';
                        check = 1;
@@ -235,25 +214,36 @@ void computador(char celulas[nCells])
                 }
             }
         }
-
-        else
-        {
-            for (i = 0; i < nCells - 2; i++)
-            {
-                i2 = i + 1;
-                i3 = i + 2;
-                if (celulas[i] == ' ' && celulas[i2] == ' ' && celulas[i3] == ' ')
-                {
-                    celulas[i] = 'O';
-                    check = 1;
-                    break;
-                }
-            }
-        }   
     }
     if (check == 0)
     {
-        winnertest(celulas);
+        int stop = 0;
+        do
+        {
+            i = rand() % 15;
+            if (celulas[i] == ' ')
+            {
+                if (celulas[i - 1] == 'V' || celulas[i + 1] == 'V')
+                {
+                    celulas[i] = 'V';
+                    break;
+                }
+                else if (celulas[i - 2] == 'O' || celulas[i + 2] == 'O')
+                    celulas[i] = ' '; 
+                else
+                {
+                    celulas[i] = 'O';
+                    break;
+                }
+                if(stop > 700)
+                {
+                    stop = 1000;
+                    celulas[i] = 'O';
+                    break;
+                }
+            }
+            stop ++;
+        }while (stop < 1000);
     }
 }
 
@@ -266,11 +256,10 @@ void humano(char celulas[nCells])
     {
         printf("\nPlayer > choose a cell where you want to put [0-14] and letter [O ou V]: ");
         scanf("%d %c", &chooseCell, &letra);
+        getchar();
         letra = toupper(letra);
         
     }while ((letra != 'V' && letra != 'O') || (chooseCell < 0 && chooseCell > 14) || celulas[chooseCell] != ' ');
     celulas[chooseCell] = letra;
-
-    return;
 }
 

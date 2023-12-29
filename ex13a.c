@@ -77,17 +77,19 @@ void printCell(char celulas[nCells])
 
 int winnerSearch(char celulas[nCells], int showCells)
 {
+    int checkNoreturn = 0;
+
     for (int i = 0; i < nCells - 2; i++)
     {
         if (celulas[i] == 'O' && celulas[i + 1] == 'V' && celulas[i + 2] == 'O')
         {
             if (showCells == 1)
                 printf("\nCells sequence: %d  %d  %d", i, i + 1, i + 2 );
-            return 1;
+            checkNoreturn = 1;
             break;
         }
-        
     }
+    return checkNoreturn;
 }
 
 
